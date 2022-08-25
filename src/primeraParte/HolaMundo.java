@@ -1,6 +1,6 @@
 package primeraParte;
 
-public class Main {
+public class HolaMundo {
 
     public static void main(String[] args) {
         String texto = "Hola mundo";
