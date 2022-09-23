@@ -1,0 +1,21 @@
+Polimorfismo:
+Uno de los 4 pilares de la oop.
+Es la propiedad por la que es posible enviar mensajes sintacticamente iguales a objetos de tipos distintos.
+
+Por ejemplo:
+
+En la clase abstracta tenemos para calcular el area de figuras geometricas. 
+Y en alguna subclase, se utiliza lo mismo, pero realiza algun plus con respecto a sus caracteristicas particulares
+
+¿Por que es necesario?
+
+Principio de sustitucion:
+Trata de poder almacenar un objeto de un tipo junto con otros de distintos tipos porque de alguna manera es
+parte de ellos
+
+Casting de objetos:
+El Cast es una operacion que permite que el objeto sea convertido en otro.
+Si sus estructuras son similares entre si, esto es posible gracias a su propiedad de ser objetos y lo que el polimorfismo, parte de esto, les permite.
+
+Hay dos tipos de casteo, UpCasting, y DownCasting:
+El UpCasting corresponde a poder almacenar subclases que comparten caracteristicas similares, pero siendo distintos, en la superclase.
