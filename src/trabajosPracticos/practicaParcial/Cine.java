@@ -19,6 +19,7 @@ public class Cine {
             cantidadEspectadores = leer.nextInt();
             leer.nextLine();
         }catch (InputMismatchException e){
+            e.printStackTrace();
             System.out.println("Error en el ingreso de datos");
         }
         Espectador[] espectadores = new Espectador[cantidadEspectadores];
