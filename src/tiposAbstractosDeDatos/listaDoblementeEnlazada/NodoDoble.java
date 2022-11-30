@@ -1,4 +1,4 @@
-package tiposAbstractosDeDatos.ListaDoblementeEnlazada;
+package tiposAbstractosDeDatos.listaDoblementeEnlazada;
 
 public class NodoDoble {
     private String dato;

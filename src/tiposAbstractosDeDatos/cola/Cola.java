@@ -1,4 +1,4 @@
-package tiposAbstractosDeDatos.Cola;
+package tiposAbstractosDeDatos.cola;
 
 public class Cola {
     private Nodo primero;

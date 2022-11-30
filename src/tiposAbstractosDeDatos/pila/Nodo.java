@@ -1,4 +1,4 @@
-package tiposAbstractosDeDatos.Pila;
+package tiposAbstractosDeDatos.pila;
 
 public class Nodo {
     private String dato;

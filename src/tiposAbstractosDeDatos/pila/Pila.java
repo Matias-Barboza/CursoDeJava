@@ -1,4 +1,4 @@
-package tiposAbstractosDeDatos.Pila;
+package tiposAbstractosDeDatos.pila;
 
 public class Pila {
     private Nodo tope;

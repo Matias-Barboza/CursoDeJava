@@ -1,4 +1,4 @@
-package tiposAbstractosDeDatos.ListaCircularDoblementeEnlazada;
+package tiposAbstractosDeDatos.listaCircularDoblementeEnlazada;
 
 public class ListaCircularDoble {
     private NodoCircularDoble primero;

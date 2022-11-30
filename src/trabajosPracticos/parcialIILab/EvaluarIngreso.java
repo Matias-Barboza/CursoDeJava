@@ -1,4 +1,4 @@
-package trabajosPracticos.ParcialIILab;
+package trabajosPracticos.parcialIILab;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

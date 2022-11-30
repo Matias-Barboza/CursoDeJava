@@ -1,4 +1,4 @@
-package trabajosPracticos.ParcialIILab;
+package trabajosPracticos.parcialIILab;
 
 public class Contacto extends Persona{
 

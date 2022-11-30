@@ -1,4 +1,4 @@
-package tiposAbstractosDeDatos.Cola;
+package tiposAbstractosDeDatos.cola;
 
 public class Nodo {
     private String dato;
