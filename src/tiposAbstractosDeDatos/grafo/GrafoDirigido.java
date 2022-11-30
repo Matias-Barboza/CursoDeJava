@@ -105,7 +105,7 @@ public class GrafoDirigido {
                 }
             }
 
-            aristas.add(new AristaDirigida(numAristas,vertice1,vertice2));
+            aristas.add(new AristaDirigida(peso,vertice1,vertice2));
             numAristas++;
 
             if(noExiste(vertice1) && noExiste(vertice2)){
@@ -127,6 +127,81 @@ public class GrafoDirigido {
             System.out.println("Error en el ingreso de datos");
         }
 
+    }
+
+    public void eliminarConexion(String vertice1,String vertice2){
+
+        if(estanIncluidos(vertice1,vertice2)){
+
+            for(int i=0; i < vertices.length ; i++){
+                for (int j=0; j < vertices.length; j++){
+                    if(vertices[i].equals(vertice1) && vertices[j].equals(vertice2)){
+                        matrizPesos[i][j] = 0;
+                    }
+                }
+            }
+
+            aristas.removeIf(arista -> arista.getConexion()[0].equals(vertice1) && arista.getConexion()[1].equals(vertice2));
+
+            numAristas--;
+
+            for (VerticeDirigido vertice:verticesD) {
+                if(vertice.getValor().equals(vertice1)){
+                    vertice.eliminarAdyacente(vertice2);
+                }
+            }
+
+        }else{
+            System.out.println("Error en los vertices");
+        }
+    }
+
+    public void modificarPeso(String vertice1,String vertice2,int peso){
+
+        if(estanIncluidos(vertice1,vertice2)){
+
+            for (AristaDirigida arista:aristas) {
+                if(arista.getConexion()[0].equals(vertice1) && arista.getConexion()[1].equals(vertice2)){
+                    arista.setValor(peso);
+                }
+            }
+
+            for(int i=0; i < vertices.length ; i++){
+                for (int j=0; j < vertices.length; j++){
+                    if(vertices[i].equals(vertice1) && vertices[j].equals(vertice2)){
+                        matrizPesos[i][j] = peso;
+                    }
+                }
+            }
+
+        }else{
+            System.out.println("Error en los vertices");
+        }
+    }
+
+    public void conocerConexion(String vertice1,String vertice2){
+        boolean conectados = false;
+
+        if(estanIncluidos(vertice1,vertice2)){
+
+            for(int i=0; i < vertices.length ; i++){
+                for (int j=0; j < vertices.length; j++){
+                    if(vertices[i].equals(vertice1) && vertices[j].equals(vertice2)){
+                        if(matrizPesos[i][j] > 0){
+                            System.out.println("Los Vertices estan conectados");
+                            conectados = true;
+                        }
+                    }
+                }
+            }
+
+            if(!conectados){
+                System.out.println("Los Vertices no estan conectados");
+            }
+
+        }else{
+            System.out.println("Error en el ingreso de datos");
+        }
     }
 
     private boolean estanIncluidos(String vertice1,String vertice2){

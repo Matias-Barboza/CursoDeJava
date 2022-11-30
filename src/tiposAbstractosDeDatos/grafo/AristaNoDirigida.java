@@ -1,10 +1,10 @@
 package tiposAbstractosDeDatos.grafo;
 
-public class AristaDirigida {
+public class AristaNoDirigida {
     private int valor;
     private String[] conexion;
 
-    public AristaDirigida(int valor,String vertice1,String vertice2){
+    public AristaNoDirigida(int valor,String vertice1,String vertice2){
         this.valor = valor;
         conexion = new String[2];
         conexion[0] = vertice1;

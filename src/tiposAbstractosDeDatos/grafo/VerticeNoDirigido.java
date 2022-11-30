@@ -2,11 +2,11 @@ package tiposAbstractosDeDatos.grafo;
 
 import java.util.LinkedList;
 
-public class VerticeDirigido {
+public class VerticeNoDirigido {
     private String valor;
     private LinkedList<String> adyacentes;
 
-    public VerticeDirigido(String valor){
+    public VerticeNoDirigido(String valor){
         this.valor = valor;
         adyacentes = new LinkedList<>();
     }
@@ -15,17 +15,25 @@ public class VerticeDirigido {
         return valor;
     }
 
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
+
+    public LinkedList<String> getAdyacentes() {
+        return adyacentes;
+    }
+
+    public void setAdyacentes(LinkedList<String> adyacentes) {
+        this.adyacentes = adyacentes;
+    }
+
     public void añadirAdyacente(String verticeAdyacente){
         adyacentes.add(verticeAdyacente);
     }
 
     public void eliminarAdyacente(String verticeAdyacente){
 
-        for (String vertice:adyacentes) {
-            if(vertice.equals(verticeAdyacente)){
-                adyacentes.remove(vertice);
-            }
-        }
+        adyacentes.removeIf(vertice -> vertice.equals(verticeAdyacente));
     }
 
     @Override

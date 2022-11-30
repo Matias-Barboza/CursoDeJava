@@ -2,6 +2,7 @@ package tiposAbstractosDeDatos;
 
 
 import tiposAbstractosDeDatos.grafo.GrafoDirigido;
+import tiposAbstractosDeDatos.grafo.GrafoNoDirigido;
 
 public class Main {
     public static void main(String[] args) {
@@ -578,29 +579,116 @@ public class Main {
         */
 
         //Grafo dirigido
-
+        /*
         String[] vertices = {"0","1","2","3","4","5","6","7","8"};
 
         GrafoDirigido grafoDirigido = new GrafoDirigido(vertices);
 
-        grafoDirigido.conectar("0","1");
-        grafoDirigido.conectar("0","4");
-        grafoDirigido.conectar("0","3");
-        grafoDirigido.conectar("4","6");
-        grafoDirigido.conectar("4","7");
-        grafoDirigido.conectar("3","6");
-        grafoDirigido.conectar("6","8");
-        grafoDirigido.conectar("7","8");
-        grafoDirigido.conectar("1","4");
-        grafoDirigido.conectar("1","5");
-        grafoDirigido.conectar("1","2");
-        grafoDirigido.conectar("2","5");
-        grafoDirigido.conectar("5","7");
+        grafoDirigido.conectar("0","1",3);
+        grafoDirigido.conectar("0","4",4);
+        grafoDirigido.conectar("0","3",5);
+        grafoDirigido.conectar("4","6",6);
+        grafoDirigido.conectar("4","7",7);
+        grafoDirigido.conectar("3","6",8);
+        grafoDirigido.conectar("6","8",9);
+        grafoDirigido.conectar("7","8",10);
+        grafoDirigido.conectar("1","4",11);
+        grafoDirigido.conectar("1","5",12);
+        grafoDirigido.conectar("1","2",13);
+        grafoDirigido.conectar("2","5",14);
+        grafoDirigido.conectar("5","7",15);
 
         grafoDirigido.imprimirMatriz();
         System.out.println();
         grafoDirigido.imprimirParesAdyacencia();
         System.out.println();
         grafoDirigido.imprimirListaDeAdyacencia();
+
+
+        grafoDirigido.eliminarConexion("0","4");
+        grafoDirigido.eliminarConexion("7","8");
+        grafoDirigido.eliminarConexion("5","7");
+
+        grafoDirigido.imprimirMatriz();
+        System.out.println();
+        grafoDirigido.imprimirParesAdyacencia();
+        System.out.println();
+        grafoDirigido.imprimirListaDeAdyacencia();
+
+        grafoDirigido.modificarPeso("3","6",3);
+        grafoDirigido.modificarPeso("6","8",7);
+        grafoDirigido.modificarPeso("0","4",45);
+
+        System.out.println();
+        grafoDirigido.imprimirMatriz();
+
+        grafoDirigido.conocerConexion("0","4");
+        grafoDirigido.conocerConexion("0","8");
+
+
+         */
+
+        //Grafo no dirigido
+
+        /*
+        String[] vertices = {"A","B","C","D","E","F"};
+
+        GrafoNoDirigido grafoNoDirigido = new GrafoNoDirigido(vertices);
+
+        /*
+        grafoNoDirigido.conectar("A","E",80);
+        grafoNoDirigido.conectar("E","A",45);
+        grafoNoDirigido.conectar("A","B",34);
+        grafoNoDirigido.conectar("A","F",23);
+        grafoNoDirigido.conectar("E","F",2);
+        grafoNoDirigido.conectar("E","D",5);
+        grafoNoDirigido.conectar("E","C",78);
+        grafoNoDirigido.conectar("E","B",4);
+        grafoNoDirigido.conectar("B","C",66);
+        grafoNoDirigido.conectar("C","B",12);
+        grafoNoDirigido.conectar("C","D",17);
+        grafoNoDirigido.conectar("D","F",10);
+        grafoNoDirigido.conectar("F","D",9);
+         */
+
+        /*
+        grafoNoDirigido.conectar("A","E");
+        grafoNoDirigido.conectar("E","A");
+        grafoNoDirigido.conectar("A","B");
+        grafoNoDirigido.conectar("A","F");
+        grafoNoDirigido.conectar("E","F");
+        grafoNoDirigido.conectar("E","D");
+        grafoNoDirigido.conectar("E","C");
+        grafoNoDirigido.conectar("E","B");
+        grafoNoDirigido.conectar("B","C");
+        grafoNoDirigido.conectar("C","B");
+        grafoNoDirigido.conectar("C","D");
+        grafoNoDirigido.conectar("D","F");
+        grafoNoDirigido.conectar("F","D");
+         */
+
+        /*
+        grafoNoDirigido.imprimirListaDeAdyacencia();
+        System.out.println();
+        grafoNoDirigido.imprimirParesAdyacencia();
+        System.out.println();
+        grafoNoDirigido.imprimirMatriz();
+        System.out.println();
+        System.out.println("Nodos adyacentes: " + grafoNoDirigido.obtenerNodosAdyacentes("A"));
+        System.out.println("Nodos adyacentes: " +grafoNoDirigido.obtenerNodosAdyacentes("D"));
+        System.out.println("Nodos adyacentes: " +grafoNoDirigido.obtenerNodosAdyacentes("Z"));
+
+        System.out.println();
+        grafoNoDirigido.eliminarConexion("E","A");
+        grafoNoDirigido.eliminarConexion("A","E");
+
+        System.out.println();
+        grafoNoDirigido.imprimirListaDeAdyacencia();
+        System.out.println();
+        grafoNoDirigido.imprimirParesAdyacencia();
+        System.out.println();
+        grafoNoDirigido.imprimirMatriz();
+
+        */
     }
 }
