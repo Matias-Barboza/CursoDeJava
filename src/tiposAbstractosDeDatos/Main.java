@@ -598,6 +598,22 @@ public class Main {
         grafoDirigido.conectar("2","5",14);
         grafoDirigido.conectar("5","7",15);
 
+
+        /*
+        grafoDirigido.conectar("0","1");
+        grafoDirigido.conectar("0","4");
+        grafoDirigido.conectar("0","3");
+        grafoDirigido.conectar("4","6");
+        grafoDirigido.conectar("4","7");
+        grafoDirigido.conectar("3","6");
+        grafoDirigido.conectar("6","8");
+        grafoDirigido.conectar("7","8");
+        grafoDirigido.conectar("1","4");
+        grafoDirigido.conectar("1","5");
+        grafoDirigido.conectar("1","2");
+        grafoDirigido.conectar("2","5");
+        grafoDirigido.conectar("5","7");
+
         grafoDirigido.imprimirMatriz();
         System.out.println();
         grafoDirigido.imprimirParesAdyacencia();
@@ -627,6 +643,8 @@ public class Main {
 
 
          */
+
+
 
         //Grafo no dirigido
 

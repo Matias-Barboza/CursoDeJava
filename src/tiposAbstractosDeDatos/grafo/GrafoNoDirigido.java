@@ -193,12 +193,14 @@ public class GrafoNoDirigido {
                             }else if(matrizPesos2[i][j] == valorArista){
                                 matrizPesos2[i][j] = 0;
                             }
+                            matrizPesos[i][j] -=  1;
                         } else if (vertices[j].equals(vertice1) && vertices[i].equals(vertice2)) {
                             if(matrizPesos[i][j] == valorArista) {
                                 matrizPesos[i][j] = 0;
                             }else if(matrizPesos2[i][j] == valorArista){
                                 matrizPesos2[i][j] = 0;
                             }
+                            matrizPesos[i][j] -= 1;
                         }
                     }
                 }

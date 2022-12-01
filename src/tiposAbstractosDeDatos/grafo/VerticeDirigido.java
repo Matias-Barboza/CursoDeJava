@@ -15,6 +15,10 @@ public class VerticeDirigido {
         return valor;
     }
 
+    public LinkedList<String> getAdyacentes() {
+        return adyacentes;
+    }
+
     public void añadirAdyacente(String verticeAdyacente){
         adyacentes.add(verticeAdyacente);
     }
